@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+after:
+- name: update-file
+  image: ubuntu:latest
+  pull: always
+  commands:
+  - echo "$DOTSCIENCE_TASK_ID" > file.txt
+  environment:
+    TOKEN: xxx
+    ENDPOINT: yyy
