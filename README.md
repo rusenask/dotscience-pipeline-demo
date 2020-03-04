@@ -1,14 +1,22 @@
 ## Dotscience Pipeline example
 
+Goals:
+1. Trigger CircleCI workflows after Dotscience training tasks
 
-```
-ds project create pipeline-test
-```
+## Setup
 
-To run the pipeline:
+1. CircleCI part: https://circleci.com/docs/2.0/getting-started/#section=getting-started
+2. Dotscience part:
 
-```
-ds run -v -p pipeline-test --upload-path . python test.py
-```
+  ```
+  ds project create pipeline-test
+  ```
 
-This will upload, run test.py and then run additional pipeline steps (prints task ID into the file).
+  To run the pipeline:
+
+  ```
+  ds run -v -p pipeline-test --upload-path . python test.py
+  ```
+
+  This will upload, run test.py and then run additional pipeline steps (prints task ID into the file).
+
